@@ -1,15 +1,3 @@
-<!--/*
- * 
- * WordPres版微信小程序
- * author: jianbo
- * organization: 守望轩  www.watch-life.net
- * github:    https://github.com/iamxjb/winxin-app-watch-life.net
- * 技术支持微信号：iamxjb
- * 开源协议：MIT
- *Copyright (c) 2017 https://www.watch-life.net All rights reserved.
- * 
- */-->
-
 <import src="../../wxParse/wxParse.wxml" />
 <import src="../../templates/header.wxml" />
 <import src="../../templates/copyright.wxml" />
@@ -23,11 +11,12 @@
             <view class="entry-date">
                 <image src="../../images/calendar.png" style="height:32rpx;width:32rpx;"></image>
                 <text class="entry-date-text">{{detailDate}}</text>
-                <image src="../../images/pageviews.png" style="height:32rpx;width:32rpx;margin-left: 20rpx;"></image> 
-                 <text class="entry-icon-text">{{detail.pageviews}}</text>
+                <image src="../../images/pageviews.png" style="height:32rpx;width:32rpx;margin-left: 20rpx;"></image>
+                <text class="entry-icon-text">{{detail.pageviews}}</text>
                 <!--  <image src="../../images/like.png" style="height:32rpx;width:32rpx;margin-left: 20rpx;"></image> 
                  <text class="entry-icon-text">20</text>
-            --></view>
+            -->
+            </view>
             <view class="entry-summary">
                 <!--  <rich-text nodes="{{detail.content.rendered}}"></rich-text>  -->
 
@@ -36,7 +25,7 @@
 
             </view>
 
-           <!-- 
+            <!-- 
             <view class="sharedetail">
                 <view>
                     <button class="copy-button" formType="submit" size="mini" bindtap="copyLink">复制本文链接</button>
@@ -46,9 +35,9 @@
                 </view>
             </view>
         -->
-             
+
         </view>
-       
+
 
         <view class="relatedPost" style="display:{{display}}">
             <view class="relatedTitle">
@@ -96,7 +85,8 @@
                                                 {{item2.author_name}} </view>
                                             <view class="comment-date"> {{item2.date}} </view>
                                             <view class="comment-summary"> {{item2.summary}}</view>
-                                            <view class="comment-repaly"><button class="replay-button touch-active" bindtap="replay" data-id="{{item2.id}}" data-name="{{item2.author_name}}">回复</button></view>
+                                            <view class="comment-repaly"><button class="replay-button touch-active" bindtap="replay" data-id="{{item2.id}}"
+                                                    data-name="{{item2.author_name}}">回复</button></view>
 
                                             <!-- 三级回复-->
                                             <view wx:for="{{ChildrenCommentsList}}" wx:key="itemid3" wx:for-index="idx" wx:for-item="item3">
@@ -107,7 +97,8 @@
                                                             {{item3.author_name}} </view>
                                                         <view class="comment-date"> {{item3.date}} </view>
                                                         <view class="comment-summary"> {{item3.summary}}</view>
-                                                        <view class="comment-repaly"><button class="replay-button touch-active" bindtap="replay" data-id="{{item3.id}}" data-name="{{item3.author_name}}">回复</button></view>
+                                                        <view class="comment-repaly"><button class="replay-button touch-active" bindtap="replay" data-id="{{item3.id}}"
+                                                                data-name="{{item3.author_name}}">回复</button></view>
 
                                                         <!-- 四级回复 -->
 
@@ -172,34 +163,38 @@
     <!--评论区-->
     <view class="menuBackground" catchtap="hiddenMenubox" style="display:{{menuBackgroup ? 'block' : 'none'}}"></view>
     <view style="display:{{display}}">
-    <view class="comment-fixed">
-        <form catchsubmit="formSubmit">
-            <view class="comment-respond">
-                <input class="comment-input" maxlength="200" name="inputPostID" value="{{detail.id}}" style="display:none" />
-                <view class="comment-box">
-                 <image src="../../images/tar-home-on.png" class="img-plus" catchtap="goHome"></image>
-                    <input class="comment-input" cursor-spacing="10" maxlength="30" name="inputComment" value="{{content}}" placeholder="{{placeholder}}" focus="{{focus}}" />
-                    <button class="comment-button touch-active" formType="submit">发送</button>
-                    <image src="../../images/plus.png" class="img-plus" catchtap="ShowHideMenu" mode=""></image>
-                </view>
-                <!--功能图标-->
-                <view class="menu-box {{isShow ? 'emoji-move-in' : 'emoji-move-out'}} {{isLoad ? 'no-emoji-move' : ''}}">
-                    <view class="iconList">
-                    <view class="iconLine">                    
-                    <button class="share-button touch-active" open-type="share">
-      <image src="../../images/forwarding.png" class="img-menu"></image></button>                    
-                     <image src="../../images/like.png" catchtap="like" class="img-menu" ></image>                      
-                      <!-- <image src="../../images/collection.png" catchtap="collection" class="img-menu"></image>  -->
-                       <image src="../../images/copy.png" class="img-menu" catchtap="copyLink"></image>
-                        <image src="../../images/appreciation.png"  catchtap="appreciation" class="img-menu"></image> 
-                    
+        <view class="comment-fixed">
+            <form catchsubmit="formSubmit">
+                <view class="comment-respond">
+                    <input class="comment-input" maxlength="200" name="inputPostID" value="{{detail.id}}" style="display:none" />
+                    <view class="comment-box">
+                        <image src="../../images/zan.png" class="img-plus" catchtap="like"></image>
+                        <input class="comment-input" cursor-spacing="10" maxlength="30" name="inputComment" value="{{content}}" placeholder="{{placeholder}}"
+                            focus="{{focus}}" />
+                        <button class="comment-button touch-active" formType="submit">发送</button>
+                        <image src="../../images/plus.png" class="img-plus" catchtap="ShowHideMenu" mode=""></image>
                     </view>
+                    <!--功能图标-->
+                    <view class="menu-box {{isShow ? 'emoji-move-in' : 'emoji-move-out'}} {{isLoad ? 'no-emoji-move' : ''}}">
+                        <view class="iconList">
+                            <view class="iconLine">
+                                
+                                
+                                <!-- <image src="../../images/like.png" catchtap="like" class="img-menu"></image> -->
+                                <!-- <image src="../../images/collection.png" catchtap="collection" class="img-menu"></image>  -->
+                                <image src="../../images/copy.png" class="img-menu" catchtap="copyLink"></image>
+                                <image src="../../images/appreciation.png" catchtap="appreciation" class="img-menu"></image>
+                                <button class="share-button touch-active" open-type="share">
+                                    <image src="../../images/forwarding.png" class="img-menu"></image>
+                                </button>
+                                <image src="../../images/back.png" class="img-menu" catchtap="goHome"></image>
+                            </view>
+                        </view>
                     </view>
-                </view>
 
-            </view>
-        </form>
-    </view>
+                </view>
+            </form>
+        </view>
     </view>
 
 

@@ -1,15 +1,3 @@
-/*
- * 
- * WordPres版微信小程序
- * author: jianbo
- * organization: 守望轩  www.watch-life.net
- * github:    https://github.com/iamxjb/winxin-app-watch-life.net
- * 技术支持微信号：iamxjb
- * 开源协议：MIT
- * 
- *  *Copyright (c) 2017 https://www.watch-life.net All rights reserved.
- */
-
 var Api = require('../../utils/api.js');
 var util = require('../../utils/util.js');
 var WxParse = require('../../wxParse/wxParse.js');
@@ -54,7 +42,7 @@ Page({
   },
   onShareAppMessage: function () {
     return {
-      title: '“守望轩”网站微信小程序,基于WordPress版小程序构建.技术支持：www.watch-life.net',
+      title: 'FED123前端学堂（fed123.com）,黑科技学习教育,头条好文、新技术!',
       path: 'pages/index/index',
       success: function (res) {
         // 转发成功
@@ -80,8 +68,9 @@ Page({
   },
   onReachBottom: function () {
 
-    //console.log("xialajiazai");  
-   
+    //console.log("xialajiazai"); 
+     
+    this.loadMore()
   },
   onLoad: function (options) {
     var self = this; 

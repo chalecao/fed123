@@ -8,7 +8,7 @@
             <image src="{{item.category_thumbnail_image}}" class="cover"></image>
           </view>
           <view class="content-title">
-            <text>{{item.name}}</text>
+            <text>{{item.name}}</text><image wx:if="{{item.hot}}" src="../../images/hot.png"></image>
           </view>
           <view class="content-brief">
             <text>{{item.description}}</text>

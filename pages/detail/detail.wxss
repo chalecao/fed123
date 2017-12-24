@@ -1,13 +1,4 @@
-/*
- * 
- * WordPres版微信小程序
- * author: jianbo
- * organization: 守望轩  www.watch-life.net
- * github:    https://github.com/iamxjb/winxin-app-watch-life.net
- * 技术支持微信号：iamxjb
- * 开源协议：MIT
- * 
- */
+
 @import "../../wxParse/wxParse.wxss";
 .content-article-detail {    
     border-bottom: 2rpx solid #ededed;
@@ -18,11 +9,11 @@
 
 .entry-title {
     font-size: 50rpx;
-    line-height: 1.2;
-    font-weight:normal;
+    line-height: normal;
+    font-weight: normal;
     outline: none;
     /*color: #21759b; */
-    margin-bottom:25rpx;
+    margin-bottom:15rpx;
 }
 
 .entry-summary{
@@ -40,20 +31,22 @@
     line-height: 1.5;
     font-weight:normal;
     outline: none;
-    margin-bottom:30rpx;
+    padding-bottom: 10rpx;
     border-bottom: 2rpx solid #ededed;
-    margin-left: 30rpx;
-    
-   
+}
+.entry-date image{
+    vertical-align: middle;
 }
 .entry-date-text
 {
-  margin-left: 10rpx
+  margin-left: 10rpx;
+ 
 }
 
 .entry-icon-text
 {
-  margin-left: 10rpx
+  margin-left: 10rpx;
+   vertical-align: middle;
 }
 .entry-category-text
 {
@@ -255,7 +248,6 @@
 .img-plus{
 width:70rpx;
 height:60rpx;
-border-radius:50%;
 margin-right:8px;
 margin-top:2rpx;
 }

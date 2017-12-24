@@ -20,7 +20,7 @@
   },
   "tabBar": {
     "color": "#7A7E83",
-    "selectedColor": "#005B8B",
+    "selectedColor": "#60c13d",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [
@@ -28,33 +28,33 @@
         "pagePath": "pages/index/index",
         "iconPath": "images/tar-home.png",
         "selectedIconPath": "images/tar-home-on.png",
-        "text": "首页"
+        "text": "头条早读"
       },     
       {
         "pagePath": "pages/topic/topic",
         "iconPath": "images/tar-topic.png",
         "selectedIconPath": "images/tar-topic-on.png",
-        "text": "专题"
+        "text": "教程学习"
       }
       ,
       {
         "pagePath": "pages/hot/hot",
-        "iconPath": "images/hot.png",
-        "selectedIconPath": "images/hot-on.png",
-        "text": "热点"
+        "iconPath": "images/tar-info.png",
+        "selectedIconPath": "images/tar-info-on.png",
+        "text": "业界动态"
       },
       {
         "pagePath": "pages/about/about",
-        "iconPath": "images/watch-life-logo-80.jpg",
-        "selectedIconPath": "images/watch-life-logo-80-on.jpg",
-        "text": "关于"
+        "iconPath": "images/myself.png",
+        "selectedIconPath": "images/myself-on.png",
+        "text": "我的成长"
       }
     ]
   },
   "networkTimeout": {
-    "request": 10000,
-    "connectSocket": 10000,
-    "uploadFile": 10000,
-    "downloadFile": 10000
+    "request": 90000,
+    "connectSocket": 90000,
+    "uploadFile": 90000,
+    "downloadFile": 90000
   }
 }
